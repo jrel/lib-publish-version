@@ -6,6 +6,10 @@
       "@lib-publish-version/a": [
         "dist/lib-publish-version/a/lib-publish-version-a",
         "dist/lib-publish-version/a"
+      ],
+      "@lib-publish-version/b": [
+        "dist/lib-publish-version/b/lib-publish-version-b",
+        "dist/lib-publish-version/b"
       ]
     },
     "baseUrl": "./",
