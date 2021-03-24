@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@lib-publish-version/a": [
+        "dist/lib-publish-version/a/lib-publish-version-a",
+        "dist/lib-publish-version/a"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

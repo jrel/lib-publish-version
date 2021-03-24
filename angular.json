@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "@lib-publish-version/a": {
+      "projectType": "library",
+      "root": "projects/lib-publish-version/a",
+      "sourceRoot": "projects/lib-publish-version/a/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/lib-publish-version/a/tsconfig.lib.json",
+            "project": "projects/lib-publish-version/a/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-publish-version/a/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-publish-version/a/src/test.ts",
+            "tsConfig": "projects/lib-publish-version/a/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-publish-version/a/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-publish-version/a/tsconfig.lib.json",
+              "projects/lib-publish-version/a/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "@lib-publish-version/a"
 }
