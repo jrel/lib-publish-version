@@ -1,6 +1,6 @@
 {
   "name": "lib-publish-version",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

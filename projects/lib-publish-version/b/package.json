@@ -1,6 +1,6 @@
 {
   "name": "@lib-publish-version/package-b",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "peerDependencies": {
     "@angular/common": "^11.2.6",
     "@angular/core": "^11.2.6"
