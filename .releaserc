@@ -1,35 +1,42 @@
 branches:
+  - +([0-9])?(.{+([0-9]),x}).x
   - main
+  - next
+  - next-major
+  - name: beta
+    prerelease: true
+  - name: alpha
+    prerelease: true
 plugins:
   - "@semantic-release/commit-analyzer"
   - "@semantic-release/release-notes-generator"
   - "@semantic-release/changelog"
- 
+
   - - "@semantic-release/npm"
     - pkgRoot: "dist/lib-publish-version/a"
       tarballDir: "dist/lib-publish-version/a"
   - - "@semantic-release/npm"
     - pkgRoot: "projects/lib-publish-version/a"
       npmPublish: false
-  
+
   - - "@semantic-release/npm"
     - pkgRoot: "dist/lib-publish-version/b"
       tarballDir: "dist/lib-publish-version/b"
   - - "@semantic-release/npm"
     - pkgRoot: "projects/lib-publish-version/b"
       npmPublish: false
- 
+
   - - "@semantic-release/npm"
     - npmPublish: false
 
   - - "@semantic-release/git"
     - assets:
-      - package.json
-      - package-lock.json
-      - projects/lib-publish-version/a/package.json
-      - projects/lib-publish-version/b/package.json
-      - CHANGELOG.md
+        - package.json
+        - package-lock.json
+        - projects/lib-publish-version/a/package.json
+        - projects/lib-publish-version/b/package.json
+        - CHANGELOG.md
   - - "@semantic-release/github"
     - assets:
-      - "dist/lib-publish-version/a/*.tgz"
-      - "dist/lib-publish-version/b/*.tgz"
+        - "dist/lib-publish-version/a/*.tgz"
+        - "dist/lib-publish-version/b/*.tgz"
